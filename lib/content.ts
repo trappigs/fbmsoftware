@@ -7,9 +7,9 @@ export const brand = {
   name: "FBM Yazılım",
   short: "FBM",
   role: "Yazılım Stüdyosu",
-  domain: "bereketlitopraklar.com.tr",
-  email: "iletisim@bereketlitopraklar.com.tr",
-  phone: "+90 (212) 000 00 00",
+  domain: "fbmyazilim.com",
+  email: "iletisim@fbmyazilim.com",
+  phone: "+90 544 588 65 42",
   location: "İstanbul, Türkiye",
   year: new Date().getFullYear(),
   social: [
