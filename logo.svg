@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420">
+  <rect width="1200" height="420" fill="none"/>
+  <text x="80" y="290"
+        font-family="Inter, Arial, Helvetica, sans-serif"
+        font-size="260"
+        font-weight="600"
+        letter-spacing="-18"
+        fill="#143A29">fbm</text>
+  <circle cx="540" cy="262" r="28" fill="#A9772A"/>
+</svg>

@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { team, getMember, initials } from "@/lib/team";
+import { brand } from "@/lib/content";
 
 export function generateStaticParams() {
   return team.map((m) => ({ slug: m.slug }));
@@ -18,7 +19,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const member = getMember(slug);
   if (!member) return { title: "Üye bulunamadı" };
-  return { title: `${member.name} — ${member.role}`, description: member.bio };
+  const url = `/ekip/${member.slug}`;
+  const images = member.image ? [member.image] : undefined;
+  return {
+    title: `${member.name} — ${member.role}`,
+    description: member.bio,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "profile",
+      url,
+      title: `${member.name} — ${brand.name}`,
+      description: member.bio,
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: member.name,
+      description: member.bio,
+      images,
+    },
+  };
 }
 
 export default async function MemberPage({

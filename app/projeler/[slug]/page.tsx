@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
 import { Gallery } from "@/components/Gallery";
 import { projects, getProject } from "@/lib/projects";
+import { brand } from "@/lib/content";
 
 export function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -19,7 +20,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return { title: "Proje bulunamadı" };
-  return { title: project.name, description: project.description };
+  const url = `/projeler/${project.slug}`;
+  const images = project.image ? [project.image] : undefined;
+  return {
+    title: project.name,
+    description: project.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      url,
+      title: `${project.name} — ${brand.name}`,
+      description: project.description,
+      images,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: project.name,
+      description: project.description,
+      images,
+    },
+  };
 }
 
 function Meta({ label, value }: { label: string; value: string }) {

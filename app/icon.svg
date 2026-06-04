@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="FBM Yazılım favicon">
+  <rect width="512" height="512" fill="none"/>
+  <rect x="48" y="48" width="416" height="416" rx="96" fill="#143A29"/>
+  <path fill="#F4EFE3" d="
+    M212 390
+    V245
+    H164
+    V190
+    H212
+    V166
+    C212 103 252 72 320 72
+    H356
+    V132
+    H322
+    C292 132 277 146 277 174
+    V190
+    H350
+    V245
+    H277
+    V390
+    Z"/>
+  <circle cx="334" cy="350" r="20" fill="#A9772A"/>
+</svg>
