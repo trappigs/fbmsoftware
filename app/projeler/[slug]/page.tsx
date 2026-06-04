@@ -203,11 +203,11 @@ export default async function ProjectDetailPage({
         {highlights && highlights.length > 0 ? (
           <section className="bg-evergreen text-paper">
             <div className="shell py-16 sm:py-20">
-              <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
+              <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-4">
                 {highlights.map((h, i) => (
                   <Reveal key={h.label} delay={i * 70}>
                     <div className="border-l border-paper/20 pl-5 lg:pl-8">
-                      <div className="font-serif text-4xl font-medium tracking-tight sm:text-5xl">
+                      <div className="font-serif text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl">
                         {h.value}
                       </div>
                       <div className="mt-3 text-sm text-paper/70">{h.label}</div>
@@ -221,8 +221,8 @@ export default async function ProjectDetailPage({
 
         {/* CTA */}
         <section className="shell pb-24 pt-4 sm:pb-28">
-          <div className="overflow-hidden rounded-3xl border border-line bg-paper-2/50 px-8 py-14 text-center sm:px-12">
-            <h2 className="mx-auto max-w-2xl font-serif text-3xl font-medium leading-tight tracking-tight sm:text-4xl">
+          <div className="overflow-hidden rounded-3xl border border-line bg-paper-2/50 px-6 py-12 text-center sm:px-12 sm:py-14">
+            <h2 className="mx-auto max-w-2xl font-serif text-2xl font-medium leading-tight tracking-tight sm:text-3xl lg:text-4xl">
               Benzer bir proje mi düşünüyorsunuz?
             </h2>
             <p className="mx-auto mt-4 max-w-md text-ink-soft">
