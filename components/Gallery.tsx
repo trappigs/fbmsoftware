@@ -41,14 +41,14 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
             type="button"
             onClick={() => setIndex(i)}
             aria-label={`${name} görsel ${i + 1} — büyüt`}
-            className="group relative aspect-[4/3] overflow-hidden rounded-2xl border border-line bg-evergreen/[0.06]"
+            className="group relative block overflow-hidden rounded-2xl border border-line bg-evergreen/[0.06] sm:aspect-[4/3]"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={src}
               alt={`${name} görsel ${i + 1}`}
               loading="lazy"
-              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              className="block w-full object-cover transition-transform duration-500 group-hover:scale-[1.04] sm:h-full"
             />
           </button>
         ))}
