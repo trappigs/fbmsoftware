@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Reveal } from "@/components/Reveal";
+import { Gallery } from "@/components/Gallery";
 import { projects, getProject } from "@/lib/projects";
 
 export function generateStaticParams() {
@@ -190,6 +191,11 @@ export default async function ProjectDetailPage({
           </div>
         </section>
 
+        {/* Gallery */}
+        {gallery && gallery.length > 0 ? (
+          <Gallery images={gallery} name={name} />
+        ) : null}
+
         {/* Highlights */}
         {highlights && highlights.length > 0 ? (
           <section className="bg-evergreen text-paper">
@@ -206,26 +212,6 @@ export default async function ProjectDetailPage({
                   </Reveal>
                 ))}
               </div>
-            </div>
-          </section>
-        ) : null}
-
-        {/* Gallery */}
-        {gallery && gallery.length > 0 ? (
-          <section className="shell py-24">
-            <div className="grid gap-6 sm:grid-cols-2">
-              {gallery.map((src, i) => (
-                <Reveal key={i} delay={(i % 2) * 80}>
-                  <div className="aspect-[4/3] overflow-hidden rounded-2xl border border-line">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={src}
-                      alt={`${name} görsel ${i + 1}`}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </Reveal>
-              ))}
             </div>
           </section>
         ) : null}

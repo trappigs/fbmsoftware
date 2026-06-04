@@ -34,6 +34,40 @@ export const projectsPage = {
 
 export const projects: Project[] = [
   {
+    slug: "vekarer",
+    name: "Vekarer",
+    category: "Web Sitesi & Platform",
+    year: "2024",
+    description:
+      "Türkiye'nin ilk paylaşımlı gayrimenkul satış platformu Vekarer için kurumsal web sitesi ve üyelik/tanıtım arayüzü.",
+    tags: ["Web Sitesi", "Gayrimenkul", "Platform", "Responsive", "UI/UX"],
+    url: "https://vekarer.com",
+    image: "/projeler/vekarer/vekarer-kapak.png",
+    client: "Dortage A.Ş.",
+    role: "Tasarım & Geliştirme",
+    overview: [
+      "Vekarer, Türkiye'nin ilk paylaşımlı gayrimenkul satış platformu. Ziyaretçileri üyeliğe ve yatırım fırsatlarına yönlendiren kurumsal web sitesi ve tanıtım arayüzü geliştirildi.",
+      "Güven veren, modern bir tasarım; net adım anlatımı (üye ol → yatırım getir → komisyon kazan), kayıt ve randevu akışları, mobil uyumlu arayüz.",
+    ],
+    services: [
+      "Web Tasarımı & Geliştirme",
+      "Üyelik & Kayıt Akışı",
+      "Randevu Sistemi",
+      "Responsive Arayüz",
+    ],
+    highlights: [
+      { label: "Sektör", value: "Gayrimenkul" },
+      { label: "Tür", value: "Platform Sitesi" },
+      { label: "Durum", value: "Yayında" },
+    ],
+    gallery: [
+      "/projeler/vekarer/vekarer-1.png",
+      "/projeler/vekarer/vekarer-2.png",
+      "/projeler/vekarer/vekarer-3.png",
+      "/projeler/vekarer/vekarer-5.png",
+    ],
+  },
+  {
     slug: "drone-360-sanal-tur",
     name: "Drone 360° Sanal Tur",
     category: "Sanal Tur / 360°",
@@ -102,7 +136,7 @@ export const projects: Project[] = [
       "Arsa ve parsel satış operasyonunu uçtan uca yöneten CRM — müşteri, stok, teklif, satış pipeline'ı, kampanya ve raporlama tek panelde.",
     tags: ["Next.js", "Supabase", "TanStack", "TypeScript", "Excel"],
     url: "",
-    image: "",
+    image: "/projeler/satis-crm/kapak.png",
     client: "Bereketli Topraklar",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -121,7 +155,17 @@ export const projects: Project[] = [
       { label: "Erişim", value: "Rol bazlı" },
       { label: "Veri", value: "Supabase" },
     ],
-    gallery: [],
+    gallery: [
+      "/projeler/satis-crm/satis-1.png",
+      "/projeler/satis-crm/satis-2.png",
+      "/projeler/satis-crm/satis-3.png",
+      "/projeler/satis-crm/satis-4.png",
+      "/projeler/satis-crm/satis-5.png",
+      "/projeler/satis-crm/satis-6.png",
+      "/projeler/satis-crm/satis-7.png",
+      "/projeler/satis-crm/satis-8.png",
+      "/projeler/satis-crm/satis-9.png",
+    ],
   },
 ];
 
