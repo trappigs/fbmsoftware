@@ -35,6 +35,43 @@ export const projectsPage = {
 
 export const projects: Project[] = [
   {
+    slug: "ai-danisan-supervizyon",
+    name: "AI Danışan Süpervizyon",
+    category: "Web Uygulaması / AI",
+    year: "2026",
+    description:
+      "Psikoloji öğrencileri için AI danışanla güvenli pratik odası — yapay zekâ destekli seans simülasyonu, vaka kütüphanesi ve beceri gelişimi takibi.",
+    tags: ["Next.js", "AI", "LLM", "SaaS", "Eğitim"],
+    url: "",
+    image: "/projeler/ai-danisan-supervizyon/psk-kapak.png",
+    imageFit: "contain",
+    client: "FBM Yazılım",
+    role: "Tasarım & Geliştirme",
+    overview: [
+      "Psikoloji öğrencileri için AI danışanla güvenli bir pratik odası. Gerçek danışan bulmanın zor ve riskli olduğu durumlarda, yapay zekâ ile üretilen danışanlarla seans pratiği yapma imkânı sunar.",
+      "Hazır vaka kütüphanesi, parametrik 'casting' ile özel danışan oluşturma, gerçek zamanlı seans simülasyonu ve her seans sonrası beceri değerlendirmesi (yansıtma, empati, açık-uçlu soru oranı) ile ilerleme takibi. (Tüm danışanlar yapay zekâ üretimidir; gerçek kişi değildir.)",
+    ],
+    services: [
+      "Ürün & UX Tasarımı",
+      "Frontend (Next.js)",
+      "AI / LLM Entegrasyonu",
+      "Seans Simülasyonu",
+      "Değerlendirme & Analitik",
+    ],
+    highlights: [
+      { label: "Alan", value: "Eğitim / Psikoloji" },
+      { label: "Çekirdek", value: "AI Danışan" },
+      { label: "Vaka", value: "21+" },
+    ],
+    gallery: [
+      "/projeler/ai-danisan-supervizyon/psk-kapak.png",
+      "/projeler/ai-danisan-supervizyon/psk-1.png",
+      "/projeler/ai-danisan-supervizyon/psk-2.png",
+      "/projeler/ai-danisan-supervizyon/psk-3.png",
+      "/projeler/ai-danisan-supervizyon/psk-4.png",
+    ],
+  },
+  {
     slug: "whatsapp-panel",
     name: "WhatsApp Omnichannel Panel",
     category: "Web Uygulaması / SaaS",
@@ -43,7 +80,8 @@ export const projects: Project[] = [
       "WhatsApp tabanlı omnichannel müşteri iletişim paneli — çoklu sohbet yönetimi, hazır şablonlar, hızlı yanıtlar ve raporlama.",
     tags: ["Next.js", "WhatsApp API", "SaaS", "Gerçek Zamanlı", "Dashboard"],
     url: "",
-    image: "/projeler/whatsapp-panel/whatsapp-panel-4.png",
+    image: "/projeler/whatsapp-panel/whatsapp-panel-kapak.png",
+    imageFit: "contain",
     client: "FBM Yazılım",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -80,6 +118,7 @@ export const projects: Project[] = [
     tags: ["Web Sitesi", "Gayrimenkul", "Next.js", "Vercel", "Responsive"],
     url: "https://lotsgayrimenkul.com",
     image: "/projeler/lots-gayrimenkul/lots-kapak.png",
+    imageFit: "contain",
     client: "Lots Gayrimenkul",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -117,6 +156,7 @@ export const projects: Project[] = [
     tags: ["Web Sitesi", "Gayrimenkul", "Platform", "Responsive", "UI/UX"],
     url: "https://vekarer.com",
     image: "/projeler/vekarer/vekarer-kapak.png",
+    imageFit: "contain",
     client: "Dortage A.Ş.",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -181,6 +221,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Supabase", "TipTap", "i18n", "SEO"],
     url: "https://bereketlitopraklar.com.tr",
     image: "/projeler/kurumsal-web-cms/kurumsal-kapak.png",
+    imageFit: "contain",
     client: "Bereketli Topraklar",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -260,6 +301,7 @@ export const projects: Project[] = [
     tags: ["EspoCRM", "CRM", "Kurulum", "Özelleştirme", "Self-hosted"],
     url: "",
     image: "/projeler/gayrimenkul-crm/gayrimenkul-crm-kapak.png",
+    imageFit: "contain",
     client: "Bereketli Topraklar",
     role: "Kurulum & Özelleştirme",
     overview: [
