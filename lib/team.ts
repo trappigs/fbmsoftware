@@ -1,7 +1,6 @@
 // =============================================================
 //  EKİP. Üye eklemek için diziye obje ekleyin.
 //  image: /public yolu (örn "/ekip/furkan.jpg") — boşsa baş harf placeholder.
-//  Roller/biyolar örnektir — gerçek bilgilerle değiştirin.
 // =============================================================
 
 export type Member = {
@@ -20,60 +19,51 @@ export const teamPage = {
   eyebrow: "Ekip",
   title: "Az ama doğru ekip",
   description:
-    "Ürünü kendi ürünümüz gibi sahiplenen, kıdemli ve odaklı bir ekip. İşin tamamına birlikte sahip çıkıyoruz.",
+    "Üç ortak; strateji, geliştirme ve iş geliştirmeyi birlikte yürütüyoruz. İşin tamamına sahip çıkan, küçük ve odaklı bir ekip.",
 };
 
 export const team: Member[] = [
   {
     slug: "furkan-hosgor",
     name: "Furkan Hoşgör",
-    role: "Kurucu Ortak & Yazılım Mimarı",
+    role: "Kurucu Ortak · CEO",
     image: "/ekip/furkan-hosgor.webp",
-    bio: "Ürün mimarisi ve teknik yön. Fikirden ölçeklenebilir sisteme.",
+    bio: "Strateji, ürün vizyonu ve iş geliştirme.",
     about: [
-      "Ürünlerin teknik mimarisini ve yönünü belirler. Karmaşık ihtiyaçları sade, sürdürülebilir sistemlere dönüştürmeye odaklanır.",
-      "Fikir aşamasından canlıya kadar mimari, kod kalitesi ve ekip koordinasyonunda aktif rol alır.",
+      "Şirketin vizyonunu ve ürün yönünü belirler; pazar ihtiyacı ile iş hedeflerini buluşturur.",
+      "Müşteri ilişkileri, iş geliştirme ve marka konumlandırmasını yöneterek ürünleri doğru kitleyle buluşturur.",
     ],
-    expertise: ["Sistem Mimarisi", "Next.js", "Backend", "Ürün Stratejisi"],
+    expertise: ["Strateji", "Ürün Vizyonu", "İş Geliştirme", "Müşteri İlişkileri"],
     email: "",
-    links: [
-      { label: "LinkedIn", href: "#" },
-      { label: "GitHub", href: "#" },
-    ],
+    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/furkan-hosgor/" }],
   },
   {
     slug: "burak-ferik",
     name: "Burak Ferik",
-    role: "Yazılım Geliştirici",
+    role: "Kurucu Ortak · İş Geliştirme Direktörü",
     image: "/ekip/burak-ferik.webp",
-    bio: "Uçtan uca geliştirme; arayüzden veritabanına.",
+    bio: "Teknik bilgiyi iş geliştirmeyle birleştirir; müşteri ile ürün arasındaki köprü.",
     about: [
-      "Arayüzden veritabanına kadar uçtan uca geliştirme yapar. Temiz, test edilebilir ve bakımı kolay kod yazmaya önem verir.",
-      "Kullanıcı deneyimini ve performansı birlikte gözeterek ürünleri hayata geçirir.",
+      "Hem geliştirme hem iş geliştirme tarafında yer alır; müşteri ihtiyacını doğru teknik çözüme çevirir.",
+      "Teknik altyapıyı bilen biri olarak uygulama ve iş geliştirme süreçlerini uçtan uca yönetir; ekip ile saha arasında köprü kurar.",
     ],
-    expertise: ["Frontend", "React", "API", "UI Geliştirme"],
+    expertise: ["İş Geliştirme", "Çözüm Mimarisi", "Geliştirme", "Müşteri İlişkileri"],
     email: "",
-    links: [
-      { label: "LinkedIn", href: "#" },
-      { label: "GitHub", href: "#" },
-    ],
+    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/burak-ferik-294a34246/" }],
   },
   {
     slug: "muhammed-hatay",
     name: "Muhammed Hatay",
-    role: "Yazılım Geliştirici",
+    role: "Kurucu Ortak · CTO",
     image: "/ekip/muhammed-hatay.webp",
-    bio: "Uygulama geliştirme ve veri tarafı.",
+    bio: "Teknik liderlik; mimari, kod ve altyapının sahibi.",
     about: [
-      "Uygulama geliştirme ve veri tarafında çalışır. Süreçleri otomatikleştiren, ölçeklenebilir çözümler kurar.",
-      "Veritabanı tasarımı, entegrasyonlar ve günlük operasyonu kolaylaştıran araçlar üzerinde yoğunlaşır.",
+      "Ürünlerin teknik mimarisini ve geliştirme süreçlerini yönetir; kod kalitesi ve altyapıdan sorumludur.",
+      "Karmaşık problemleri sade, ölçeklenebilir çözümlere dönüştürür; ekibin teknik omurgasıdır.",
     ],
-    expertise: ["Full-stack", "Supabase", "Veri", "Otomasyon"],
+    expertise: ["Yazılım Mimarisi", "Full-stack", "Backend", "Altyapı"],
     email: "",
-    links: [
-      { label: "LinkedIn", href: "#" },
-      { label: "GitHub", href: "#" },
-    ],
+    links: [{ label: "LinkedIn", href: "https://www.linkedin.com/in/muhammed-hatay-0196a5204/" }],
   },
 ];
 
