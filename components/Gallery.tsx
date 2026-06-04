@@ -60,27 +60,40 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
           aria-modal="true"
           aria-label={`${name} galeri`}
           onClick={close}
-          className="fixed inset-0 z-[80] flex items-center justify-center bg-ink/90 p-4 backdrop-blur-sm"
+          className="fixed inset-0 z-[80] flex flex-col bg-ink/90 p-3 backdrop-blur-sm sm:p-4"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={images[index]}
-            alt={`${name} görsel ${index + 1}`}
-            onClick={(e) => e.stopPropagation()}
-            className="max-h-[88vh] max-w-[92vw] rounded-lg object-contain shadow-2xl"
-          />
+          {/* Üst: sayaç + kapat */}
+          <div className="flex shrink-0 items-center justify-between pb-3">
+            <span className="text-sm text-paper/70">
+              {images.length > 1 ? `${index + 1} / ${images.length}` : ""}
+            </span>
+            <button
+              type="button"
+              onClick={close}
+              aria-label="Kapat"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-xl text-paper transition-colors hover:bg-paper/20"
+            >
+              ✕
+            </button>
+          </div>
 
-          <button
-            type="button"
+          {/* Görsel — kalan alanı doldurur, her ekrana oturur */}
+          <div
+            className="flex min-h-0 flex-1 items-center justify-center"
             onClick={close}
-            aria-label="Kapat"
-            className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-paper/10 text-xl text-paper transition-colors hover:bg-paper/20"
           >
-            ✕
-          </button>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={images[index]}
+              alt={`${name} görsel ${index + 1}`}
+              onClick={(e) => e.stopPropagation()}
+              className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+            />
+          </div>
 
+          {/* Alt: ileri / geri */}
           {images.length > 1 ? (
-            <>
+            <div className="flex shrink-0 items-center justify-center gap-4 pt-3">
               <button
                 type="button"
                 onClick={(e) => {
@@ -88,7 +101,7 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
                   prev();
                 }}
                 aria-label="Önceki"
-                className="absolute left-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/10 text-paper transition-colors hover:bg-paper/20"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-paper/10 text-paper transition-colors hover:bg-paper/20"
               >
                 ←
               </button>
@@ -99,14 +112,11 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
                   next();
                 }}
                 aria-label="Sonraki"
-                className="absolute right-4 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full bg-paper/10 text-paper transition-colors hover:bg-paper/20"
+                className="flex h-11 w-11 items-center justify-center rounded-full bg-paper/10 text-paper transition-colors hover:bg-paper/20"
               >
                 →
               </button>
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-sm text-paper/70">
-                {index + 1} / {images.length}
-              </div>
-            </>
+            </div>
           ) : null}
         </div>
       ) : null}
