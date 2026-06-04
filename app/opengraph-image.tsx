@@ -14,62 +14,49 @@ export default function OpengraphImage() {
           width: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
+          justifyContent: "center",
           background: "#f4efe3",
-          padding: "80px",
-          color: "#16150d",
+          padding: "90px",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        {/* fbm wordmark + ochre dot */}
+        <div style={{ display: "flex", alignItems: "flex-end" }}>
           <div
             style={{
-              width: 64,
-              height: 64,
-              borderRadius: 16,
-              background: "#143a29",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#f4efe3",
-              fontSize: 38,
+              fontSize: 230,
               fontWeight: 700,
+              letterSpacing: -14,
+              lineHeight: 1,
+              color: "#143a29",
             }}
           >
-            F
+            fbm
           </div>
-          <div style={{ fontSize: 30, fontWeight: 600 }}>{brand.name}</div>
-        </div>
-
-        <div style={{ display: "flex", flexDirection: "column" }}>
           <div
             style={{
-              fontSize: 66,
-              fontWeight: 700,
-              lineHeight: 1.1,
-              maxWidth: 940,
+              width: 34,
+              height: 34,
+              borderRadius: 999,
+              background: "#a9772a",
+              marginLeft: 10,
+              marginBottom: 24,
             }}
-          >
-            Karmaşık fikirleri sade, ölçeklenebilir yazılıma çeviririz.
-          </div>
-          <div style={{ marginTop: 28, fontSize: 30, color: "#54513f" }}>
-            Web &amp; SaaS Yazılım Stüdyosu
-          </div>
+          />
         </div>
 
         <div
           style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 14,
-            fontSize: 26,
-            color: "#54513f",
+            marginTop: 40,
+            fontSize: 40,
+            fontWeight: 600,
+            color: "#16150d",
           }}
         >
-          <div
-            style={{ width: 12, height: 12, borderRadius: 99, background: "#a9772a" }}
-          />
-          {brand.domain}
+          {brand.name}
+        </div>
+        <div style={{ marginTop: 10, fontSize: 30, color: "#54513f" }}>
+          {`Web & SaaS Yazılım Stüdyosu · ${brand.domain}`}
         </div>
       </div>
     ),
