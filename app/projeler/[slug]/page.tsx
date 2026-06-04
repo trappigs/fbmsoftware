@@ -74,16 +74,16 @@ export default async function ProjectDetailPage({
             ← Tüm projeler
           </Link>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-ink-faint">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-sm text-ink-faint">
             <span>{category}</span>
             <span className="h-1 w-1 rounded-full bg-ochre" />
             <span>{year}</span>
           </div>
 
-          <h1 className="mt-5 max-w-4xl font-serif text-[2.7rem] font-medium leading-[1.04] tracking-[-0.02em] sm:text-6xl">
+          <h1 className="mt-5 mx-auto max-w-4xl text-center font-serif text-[2.7rem] font-medium leading-[1.04] tracking-[-0.02em] sm:text-6xl">
             {name}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-soft">
+          <p className="mt-6 mx-auto max-w-2xl text-center text-lg leading-relaxed text-ink-soft">
             {description}
           </p>
 
@@ -140,7 +140,7 @@ export default async function ProjectDetailPage({
         {/* Body */}
         <section className="shell py-24 sm:py-28">
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 text-center">
               <span className="eyebrow">Genel Bakış</span>
               <div className="mt-7 space-y-5 text-lg leading-relaxed text-ink-soft">
                 {(overview ?? [description]).map((p, i) => (
