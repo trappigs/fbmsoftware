@@ -56,7 +56,7 @@ export const team: Member[] = [
     name: "Muhammed Hatay",
     role: "Kurucu Ortak · Yazılım Geliştirme",
     image: "/ekip/muhammed-hatay.webp",
-    bio: "İşin teknik tarafını yürütür; kod ve altyapı onun alanı.",
+    bio: "İşin teknik tarafını yürütür; kod ve altyapıdan sorumludur.",
     about: [
       "Geliştirme ve teknik altyapıya odaklanır; mimari ve kod kalitesinden sorumlu.",
       "Karmaşık işleri sade, çalışır çözümlere dönüştürür.",

@@ -38,16 +38,27 @@ export function Header() {
           {brand.name}
         </a>
 
-        <nav className="hidden items-center gap-9 md:flex">
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="link-underline text-sm text-ink-soft transition-colors hover:text-ink"
-            >
-              {item.label}
-            </a>
-          ))}
+        <nav className="hidden items-center gap-7 md:flex">
+          {nav.map((item) =>
+            item.href === "/projeler" ? (
+              <a
+                key={item.href}
+                href={item.href}
+                className="inline-flex items-center gap-1.5 rounded-full border border-evergreen/20 bg-evergreen/[0.07] px-3 py-1 text-sm font-medium text-evergreen transition-colors hover:bg-evergreen/[0.12]"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-ochre" />
+                {item.label}
+              </a>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="link-underline text-sm text-ink-soft transition-colors hover:text-ink"
+              >
+                {item.label}
+              </a>
+            )
+          )}
         </nav>
 
         <div className="hidden md:block">
