@@ -50,6 +50,7 @@ export default async function ProjectDetailPage({
     tags,
     url,
     image,
+    imageFit,
     embedUrl,
     client,
     role,
@@ -116,7 +117,9 @@ export default async function ProjectDetailPage({
               <img
                 src={image}
                 alt={name}
-                className="h-full w-full object-cover"
+                className={`h-full w-full ${
+                  imageFit === "contain" ? "object-contain" : "object-cover"
+                }`}
               />
             ) : (
               <div className="flex h-full items-center justify-center bg-grid">

@@ -3,7 +3,8 @@ import { projects, type Project } from "@/lib/projects";
 import { Reveal } from "@/components/Reveal";
 
 function Card({ project }: { project: Project }) {
-  const { slug, name, category, year, description, tags, image } = project;
+  const { slug, name, category, year, description, tags, image, imageFit } =
+    project;
   return (
     <Link
       href={`/projeler/${slug}`}
@@ -15,7 +16,9 @@ function Card({ project }: { project: Project }) {
           <img
             src={image}
             alt={name}
-            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            className={`h-full w-full transition-transform duration-500 group-hover:scale-[1.03] ${
+              imageFit === "contain" ? "object-contain" : "object-cover"
+            }`}
           />
         ) : (
           <div className="flex h-full items-center justify-center bg-grid">

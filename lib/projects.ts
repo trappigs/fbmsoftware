@@ -15,6 +15,7 @@ export type Project = {
   tags: string[];
   url?: string; // yayın adresi
   image?: string; // kapak görseli
+  imageFit?: "cover" | "contain"; // "contain" = kırpma yok (hazır kapak tasarımı için)
   embedUrl?: string; // gömülecek içerik (krpano sanal tur, video vb. — https olmalı)
   // —— detay sayfası ——
   client?: string; // müşteri
@@ -33,6 +34,79 @@ export const projectsPage = {
 };
 
 export const projects: Project[] = [
+  {
+    slug: "whatsapp-panel",
+    name: "WhatsApp Omnichannel Panel",
+    category: "Web Uygulaması / SaaS",
+    year: "2026",
+    description:
+      "WhatsApp tabanlı omnichannel müşteri iletişim paneli — çoklu sohbet yönetimi, hazır şablonlar, hızlı yanıtlar ve raporlama.",
+    tags: ["Next.js", "WhatsApp API", "SaaS", "Gerçek Zamanlı", "Dashboard"],
+    url: "",
+    image: "/projeler/whatsapp-panel/whatsapp-panel-4.png",
+    client: "FBM Yazılım",
+    role: "Tasarım & Geliştirme",
+    overview: [
+      "WhatsApp üzerinden gelen müşteri mesajlarını tek panelde yöneten omnichannel iletişim aracı. Çoklu temsilci, sohbet atama, etiketleme ve bot ile otomatik yanıt.",
+      "Hazır mesaj şablonları, '/' ile hızlı yanıtlar, müşteri kartı ve detaylı raporlama (sohbet hacmi, yanıt süresi, dönüşüm) ile satış ve destek süreçlerini hızlandırır. (Ekran görüntülerinde kişisel veriler bulanıklaştırılmıştır.)",
+    ],
+    services: [
+      "Ürün & UX Tasarımı",
+      "Frontend (Next.js)",
+      "WhatsApp Entegrasyonu",
+      "Gerçek Zamanlı Sohbet",
+      "Raporlama",
+    ],
+    highlights: [
+      { label: "Kanal", value: "WhatsApp" },
+      { label: "Mod", value: "Omnichannel" },
+      { label: "Özellik", value: "Bot + Şablon" },
+    ],
+    gallery: [
+      "/projeler/whatsapp-panel/whatsapp-panel-kapak.png",
+      "/projeler/whatsapp-panel/whatsapp-panel-4.png",
+      "/projeler/whatsapp-panel/whatsapp-panel-1.png",
+      "/projeler/whatsapp-panel/whatsapp-panel-2.png",
+      "/projeler/whatsapp-panel/whatsapp-panel-3.png",
+    ],
+  },
+  {
+    slug: "lots-gayrimenkul",
+    name: "Lots Gayrimenkul",
+    category: "Web Sitesi",
+    year: "2026",
+    description:
+      "Premium emlak deneyimi sunan Lots Gayrimenkul için kurumsal web sitesi — ilan yönlendirme, blog ve kurumsal sayfalar.",
+    tags: ["Web Sitesi", "Gayrimenkul", "Next.js", "Vercel", "Responsive"],
+    url: "https://lotsgayrimenkul.com",
+    image: "/projeler/lots-gayrimenkul/lots-kapak.png",
+    client: "Lots Gayrimenkul",
+    role: "Tasarım & Geliştirme",
+    overview: [
+      "Lots Gayrimenkul için premium bir emlak deneyimi sunan kurumsal web sitesi. Lüks ve konforu öne çıkaran, modern ve sade bir arayüz tasarlandı.",
+      "Anasayfadan ilan platformlarına yönlendirme, blog/içerik bölümü, kurumsal sayfalar (hakkımızda, ekip, misyon, vizyon) ve iletişim/harita; tamamen mobil uyumlu.",
+    ],
+    services: [
+      "Web Tasarımı & Geliştirme",
+      "Blog & İçerik",
+      "Kurumsal Sayfalar",
+      "Responsive Arayüz",
+    ],
+    highlights: [
+      { label: "Sektör", value: "Gayrimenkul" },
+      { label: "Tür", value: "Kurumsal Site" },
+      { label: "Durum", value: "Yayında" },
+    ],
+    gallery: [
+      "/projeler/lots-gayrimenkul/lots-d-1.png",
+      "/projeler/lots-gayrimenkul/lots-d-2.png",
+      "/projeler/lots-gayrimenkul/lots-d-3.png",
+      "/projeler/lots-gayrimenkul/lots-d-4.png",
+      "/projeler/lots-gayrimenkul/lots-m-1.png",
+      "/projeler/lots-gayrimenkul/lots-m-2.png",
+      "/projeler/lots-gayrimenkul/lots-m-3.png",
+    ],
+  },
   {
     slug: "vekarer",
     name: "Vekarer",
@@ -105,8 +179,8 @@ export const projects: Project[] = [
     description:
       "Çok dilli kurumsal web sitesi ve ona özel geliştirilen içerik yönetim paneli — blog, dinamik sayfa, proje, ekip ve medya yönetimi tek yerde.",
     tags: ["Next.js", "Supabase", "TipTap", "i18n", "SEO"],
-    url: "",
-    image: "",
+    url: "https://bereketlitopraklar.com.tr",
+    image: "/projeler/kurumsal-web-cms/kurumsal-kapak.png",
     client: "Bereketli Topraklar",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -125,7 +199,15 @@ export const projects: Project[] = [
       { label: "Dil", value: "Çok dilli" },
       { label: "SEO", value: "Yönlendirme + meta" },
     ],
-    gallery: [],
+    gallery: [
+      "/projeler/kurumsal-web-cms/kurumsal-d-1.png",
+      "/projeler/kurumsal-web-cms/kurumsal-d-2.png",
+      "/projeler/kurumsal-web-cms/kurumsal-d-3.png",
+      "/projeler/kurumsal-web-cms/kurumsal-d-4.png",
+      "/projeler/kurumsal-web-cms/kurumsal-m-1.png",
+      "/projeler/kurumsal-web-cms/kurumsal-m-2.png",
+      "/projeler/kurumsal-web-cms/kurumsal-m-3.png",
+    ],
   },
   {
     slug: "satis-crm",
@@ -137,6 +219,7 @@ export const projects: Project[] = [
     tags: ["Next.js", "Supabase", "TanStack", "TypeScript", "Excel"],
     url: "",
     image: "/projeler/satis-crm/kapak.png",
+    imageFit: "contain",
     client: "Bereketli Topraklar",
     role: "Tasarım & Geliştirme",
     overview: [
@@ -165,6 +248,40 @@ export const projects: Project[] = [
       "/projeler/satis-crm/satis-7.png",
       "/projeler/satis-crm/satis-8.png",
       "/projeler/satis-crm/satis-9.png",
+    ],
+  },
+  {
+    slug: "gayrimenkul-crm",
+    name: "Gayrimenkul CRM (EspoCRM)",
+    category: "CRM / Kurulum",
+    year: "2025",
+    description:
+      "Gayrimenkul satış ekibi için EspoCRM tabanlı, Türkçeleştirilmiş ve markalanmış müşteri ilişkileri yönetimi kurulumu.",
+    tags: ["EspoCRM", "CRM", "Kurulum", "Özelleştirme", "Self-hosted"],
+    url: "",
+    image: "/projeler/gayrimenkul-crm/gayrimenkul-crm-kapak.png",
+    client: "Bereketli Topraklar",
+    role: "Kurulum & Özelleştirme",
+    overview: [
+      "Gayrimenkul satış ekibi için açık kaynak EspoCRM üzerine kurulan, Türkçeleştirilmiş ve kurumsal kimliğe göre markalanmış müşteri ilişkileri yönetimi sistemi.",
+      "Potansiyel müşteri, fırsat, firma ve aktivite (toplantı, arama, görev) takibi; rol/yetki yönetimi ve gösterge paneli ile satış sürecinin merkezî yönetimi. (Ekran görüntülerinde kişisel veriler bulanıklaştırılmıştır.)",
+    ],
+    services: [
+      "EspoCRM Kurulumu",
+      "Türkçeleştirme & Markalama",
+      "Modül & Alan Özelleştirme",
+      "Kullanıcı & Yetki Yönetimi",
+    ],
+    highlights: [
+      { label: "Taban", value: "EspoCRM" },
+      { label: "Tür", value: "Self-hosted" },
+      { label: "Dil", value: "Türkçe" },
+    ],
+    gallery: [
+      "/projeler/gayrimenkul-crm/gayrimenkul-crm-kapak.png",
+      "/projeler/gayrimenkul-crm/gayrimenkul-crm-1.png",
+      "/projeler/gayrimenkul-crm/gayrimenkul-crm-2.png",
+      "/projeler/gayrimenkul-crm/gayrimenkul-crm-3.png",
     ],
   },
 ];
