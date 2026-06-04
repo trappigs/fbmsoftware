@@ -152,7 +152,7 @@ export default async function ProjectDetailPage({
             </div>
 
             <aside className="lg:col-span-4 lg:col-start-9">
-              <dl className="space-y-6">
+              <dl className="space-y-6 text-center sm:text-left">
                 {client ? <Meta label="Müşteri" value={client} /> : null}
                 {role ? <Meta label="Rol" value={role} /> : null}
                 <Meta label="Yıl" value={year} />
@@ -177,7 +177,7 @@ export default async function ProjectDetailPage({
                     <dt className="text-xs uppercase tracking-[0.16em] text-ink-faint">
                       Etiketler
                     </dt>
-                    <dd className="mt-3 flex flex-wrap gap-2">
+                    <dd className="mt-3 flex flex-wrap justify-center gap-2 sm:justify-start">
                       {tags.map((t) => (
                         <span
                           key={t}
