@@ -4,19 +4,11 @@ import { Footer } from "@/components/Footer";
 import { Projects } from "@/components/Projects";
 import { projectsPage } from "@/lib/projects";
 
-const DESC = "FBM Yazılım'ın geliştirdiği web ve SaaS projelerinden bir seçki.";
-
 export const metadata: Metadata = {
   title: "Projeler",
-  description: DESC,
+  description:
+    "FBM Yazılım'ın geliştirdiği web ve SaaS projelerinden bir seçki.",
   alternates: { canonical: "/projeler" },
-  openGraph: {
-    type: "website",
-    url: "/projeler",
-    title: "Projeler",
-    description: DESC,
-  },
-  twitter: { card: "summary_large_image", title: "Projeler", description: DESC },
 };
 
 export default function ProjelerPage() {

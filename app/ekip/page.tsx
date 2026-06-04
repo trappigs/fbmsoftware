@@ -4,19 +4,10 @@ import { Footer } from "@/components/Footer";
 import { Team } from "@/components/Team";
 import { teamPage } from "@/lib/team";
 
-const DESC = "FBM Yazılım ekibi — ürünleri geliştiren kişiler.";
-
 export const metadata: Metadata = {
   title: "Ekip",
-  description: DESC,
+  description: "FBM Yazılım ekibi — ürünleri geliştiren kişiler.",
   alternates: { canonical: "/ekip" },
-  openGraph: {
-    type: "website",
-    url: "/ekip",
-    title: "Ekip",
-    description: DESC,
-  },
-  twitter: { card: "summary_large_image", title: "Ekip", description: DESC },
 };
 
 export default function EkipPage() {
