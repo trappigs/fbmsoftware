@@ -10,7 +10,7 @@ export function Contact() {
     name: "",
     email: "",
     message: "",
-    company: "",
+    gotcha: "",
   });
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
@@ -33,7 +33,7 @@ export function Contact() {
         );
       }
       setStatus("sent");
-      setForm({ name: "", email: "", message: "", company: "" });
+      setForm({ name: "", email: "", message: "", gotcha: "" });
     } catch (err) {
       setStatus("error");
       setError(
@@ -96,13 +96,13 @@ export function Contact() {
             <div className="space-y-7">
               <input
                 type="text"
-                name="company"
+                name="_gotcha"
                 tabIndex={-1}
                 autoComplete="off"
                 aria-hidden="true"
-                value={form.company}
+                value={form.gotcha}
                 onChange={(e) =>
-                  setForm((f) => ({ ...f, company: e.target.value }))
+                  setForm((f) => ({ ...f, gotcha: e.target.value }))
                 }
                 className="absolute left-[-9999px] h-0 w-0 opacity-0"
               />

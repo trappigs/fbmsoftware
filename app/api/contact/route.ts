@@ -16,7 +16,7 @@ function esc(s: string) {
 }
 
 export async function POST(req: Request) {
-  let data: { name?: string; email?: string; message?: string; company?: string };
+  let data: { name?: string; email?: string; message?: string; gotcha?: string };
   try {
     data = await req.json();
   } catch {
@@ -28,7 +28,7 @@ export async function POST(req: Request) {
   const message = (data.message || "").trim();
 
   // honeypot — bot doldurursa sessizce başarı dön
-  if (data.company) return NextResponse.json({ ok: true });
+  if (data.gotcha) return NextResponse.json({ ok: true });
 
   if (!name || !email || !message) {
     return NextResponse.json({ ok: false, error: "Lütfen tüm alanları doldurun." }, { status: 400 });
