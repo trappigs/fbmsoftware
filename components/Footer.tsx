@@ -44,19 +44,25 @@ export function Footer() {
 
           <div className="lg:col-span-3">
             <div className="text-xs uppercase tracking-[0.16em] text-ink-faint">
-              Bağlantılar
+              Yasal
             </div>
             <ul className="mt-4 space-y-2.5">
-              {brand.social.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    className="text-sm text-ink-soft transition-colors hover:text-ink"
-                  >
-                    {s.label}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/gizlilik"
+                  className="text-sm text-ink-soft transition-colors hover:text-ink"
+                >
+                  Gizlilik &amp; KVKK
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/#iletisim"
+                  className="text-sm text-ink-soft transition-colors hover:text-ink"
+                >
+                  İletişim
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -65,9 +71,14 @@ export function Footer() {
           <span>
             © {brand.year} {brand.name}. Tüm hakları saklıdır.
           </span>
-          <a href="#top" className="link-underline">
-            Yukarı çık ↑
-          </a>
+          <div className="flex items-center gap-5">
+            <a href="/gizlilik" className="link-underline">
+              Gizlilik
+            </a>
+            <a href="#top" className="link-underline">
+              Yukarı çık ↑
+            </a>
+          </div>
         </div>
       </div>
     </footer>
