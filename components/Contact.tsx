@@ -3,16 +3,45 @@
 import { useState, type FormEvent } from "react";
 import { brand, contact } from "@/lib/content";
 
-export function Contact() {
-  const [form, setForm] = useState({ name: "", email: "", message: "" });
+type Status = "idle" | "sending" | "sent" | "error";
 
-  const onSubmit = (e: FormEvent) => {
+export function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    message: "",
+    company: "",
+  });
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState("");
+
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const subject = `Yeni proje talebi — ${form.name || "İsimsiz"}`;
-    const body = `Ad: ${form.name}\nE-posta: ${form.email}\n\n${form.message}`;
-    window.location.href = `mailto:${brand.email}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    if (status === "sending") return;
+    setStatus("sending");
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok || !data.ok) {
+        throw new Error(
+          data.error || "E-posta gönderilemedi. Lütfen tekrar deneyin."
+        );
+      }
+      setStatus("sent");
+      setForm({ name: "", email: "", message: "", company: "" });
+    } catch (err) {
+      setStatus("error");
+      setError(
+        err instanceof Error
+          ? err.message
+          : "E-posta gönderilemedi. Lütfen tekrar deneyin."
+      );
+    }
   };
 
   const field =
@@ -65,6 +94,18 @@ export function Contact() {
             className="rounded-2xl border border-line bg-paper-2/40 p-7 sm:p-9"
           >
             <div className="space-y-7">
+              <input
+                type="text"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                value={form.company}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, company: e.target.value }))
+                }
+                className="absolute left-[-9999px] h-0 w-0 opacity-0"
+              />
               <div>
                 <label htmlFor="name" className="sr-only">
                   Ad Soyad
@@ -115,13 +156,27 @@ export function Contact() {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-primary mt-9 w-full">
-              Gönder
-              <span aria-hidden="true">→</span>
+            <button
+              type="submit"
+              disabled={status === "sending"}
+              className="btn btn-primary mt-9 w-full disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {status === "sending" ? "Gönderiliyor…" : "Gönder"}
+              {status !== "sending" && <span aria-hidden="true">→</span>}
             </button>
-            <p className="mt-4 text-center text-xs text-ink-faint">
-              Form, e-posta uygulamanızı açar. Dilerseniz doğrudan{" "}
-              {brand.email} adresine yazabilirsiniz.
+            <p className="mt-4 text-center text-sm" aria-live="polite">
+              {status === "sent" ? (
+                <span className="text-evergreen">
+                  Mesajınız iletildi. En kısa sürede dönüş yapacağız.
+                </span>
+              ) : status === "error" ? (
+                <span className="text-red-600">{error}</span>
+              ) : (
+                <span className="text-xs text-ink-faint">
+                  Formu gönderdiğinizde mesajınız doğrudan {brand.email}{" "}
+                  adresine ulaşır.
+                </span>
+              )}
             </p>
           </form>
         </div>
