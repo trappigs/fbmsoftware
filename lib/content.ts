@@ -62,35 +62,35 @@ export const solutions = {
   items: [
     {
       index: "01",
-      name: "Akış",
-      kicker: "İş Süreçleri & Otomasyon",
+      name: "Web Siteleri & CMS",
+      kicker: "Kurumsal Web",
       description:
-        "Tekrarlayan işleri otomatikleştiren, ekipleri tek panelde buluşturan süreç yönetim platformu.",
-      tags: ["Workflow", "Otomasyon", "Roller & İzinler"],
+        "Çok dilli kurumsal siteler ve onlara özel içerik yönetim panelleri; blog, sayfa ve medya yönetimi.",
+      tags: ["Next.js", "CMS", "SEO"],
     },
     {
       index: "02",
-      name: "Panel",
-      kicker: "Veri & Analitik",
+      name: "SaaS & Web Uygulamaları",
+      kicker: "Ürün Geliştirme",
       description:
-        "Dağınık verileri tek noktada toplayan, gerçek zamanlı gösterge panelleri ve raporlama çözümü.",
-      tags: ["Dashboard", "Raporlama", "Gerçek zamanlı"],
+        "Fikirden canlıya uçtan uca web uygulamaları ve SaaS ürünleri; ölçeklenebilir mimari, temiz arayüz.",
+      tags: ["SaaS", "React", "Supabase"],
     },
     {
       index: "03",
-      name: "Bağla",
-      kicker: "Entegrasyon & API",
+      name: "CRM & İş Yazılımları",
+      kicker: "İç Platformlar",
       description:
-        "Mevcut sistemlerinizi birbirine bağlayan, güvenli ve belgelenmiş API katmanı ve entegrasyonlar.",
-      tags: ["REST", "Webhook", "Güvenlik"],
+        "Satış, stok ve operasyonu yöneten özel CRM ve iş panelleri; rol bazlı erişim ve raporlama.",
+      tags: ["CRM", "Otomasyon", "Raporlama"],
     },
     {
       index: "04",
-      name: "Saha",
-      kicker: "Mobil & Saha Yönetimi",
+      name: "Yapay Zekâ & Entegrasyon",
+      kicker: "AI & Otomasyon",
       description:
-        "Çevrimdışı çalışabilen, saha ekipleri için tasarlanmış hızlı ve sade mobil uygulama.",
-      tags: ["iOS & Android", "Çevrimdışı", "Konum"],
+        "AI destekli ürünler, WhatsApp / omnichannel panelleri ve API entegrasyonlarıyla süreç otomasyonu.",
+      tags: ["AI / LLM", "WhatsApp API", "Entegrasyon"],
     },
   ],
 };
@@ -126,16 +126,15 @@ export const approach = {
 
 export const stats = {
   items: [
-    { value: "120+", label: "Tamamlanan proje" },
-    { value: "8", label: "Yıl deneyim" },
-    { value: "%99.9", label: "Çalışma süresi" },
-    { value: "40+", label: "Mutlu müşteri" },
+    { value: "10+", label: "Tamamlanan proje" },
+    { value: "2", label: "Yıl deneyim" },
+    { value: "5+", label: "Mutlu müşteri" },
   ],
 };
 
 export const about = {
   eyebrow: "Hakkımızda",
-  title: "Küçük, kıdemli ve odaklı bir ekip",
+  title: "Küçük, hızlı ve odaklı bir ekip",
   paragraphs: [
     "FBM Yazılım; web ve SaaS ürünleri geliştiren bir yazılım stüdyosudur. İşin tamamına sahip çıkan, az ama doğru kişiden oluşan bir ekibiz.",
     "Gösterişten çok işe yarayan yazılıma inanırız. Sade arayüzler, sağlam mimari ve uzun ömürlü kod ile kalıcı değer üretmeyi hedefleriz.",

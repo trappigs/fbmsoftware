@@ -5,7 +5,7 @@ export function Stats() {
   return (
     <section className="bg-evergreen text-paper">
       <div className="shell py-16 sm:py-20">
-        <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-3 sm:gap-y-0">
           {stats.items.map((item, i) => (
             <Reveal key={item.label} delay={i * 70}>
               <div className="border-l border-paper/20 pl-5 lg:pl-8">
