@@ -20,7 +20,6 @@ export async function generateMetadata({
   const member = getMember(slug);
   if (!member) return { title: "Üye bulunamadı" };
   const url = `/ekip/${member.slug}`;
-  const images = member.image ? [member.image] : undefined;
   return {
     title: `${member.name} — ${member.role}`,
     description: member.bio,
@@ -30,13 +29,11 @@ export async function generateMetadata({
       url,
       title: `${member.name} — ${brand.name}`,
       description: member.bio,
-      images,
     },
     twitter: {
       card: "summary_large_image",
       title: member.name,
       description: member.bio,
-      images,
     },
   };
 }
