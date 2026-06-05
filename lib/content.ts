@@ -10,7 +10,7 @@ export const brand = {
   domain: "fbmyazilim.com",
   email: "iletisim@fbmyazilim.com",
   phone: "+90 544 588 65 42",
-  location: "Bursa, Türkiye",
+  location: "Çağrışan Mahallesi Yaprak Sk. No: 3 Mudanya, Bursa, Türkiye",
   year: new Date().getFullYear(),
   social: [
     { label: "LinkedIn", href: "#" },

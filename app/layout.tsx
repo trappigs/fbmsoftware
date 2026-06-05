@@ -80,7 +80,9 @@ const jsonLd = {
   description: SITE_DESC,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Bursa",
+    streetAddress: "Çağrışan Mahallesi Yaprak Sk. No: 3",
+    addressLocality: "Mudanya",
+    addressRegion: "Bursa",
     addressCountry: "TR",
   },
   sameAs: brand.social
